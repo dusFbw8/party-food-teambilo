@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="/add" method="post">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" name="username" id="name" placeholder="Enter the Name...">
+        </div>
+        <div>
+            <label for="food">Food:</label>
+            <input type="text" name="food" id="food" placeholder="Enter a food you want...">
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+    <ol>
+        {{#each ter}}
+        <li>{{this.username}}----------{{this.food}}</li>
+        {{/each}}
+    </ol>
+</body>
+
+</html>
